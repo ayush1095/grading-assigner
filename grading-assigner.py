@@ -27,8 +27,8 @@ ASSIGNED_COUNT_URL = '{}/me/submissions/assigned_count.json'.format(BASE_URL)
 ASSIGNED_URL = '{}/me/submissions/assigned.json'.format(BASE_URL)
 
 
-account = "ACaf93c44805d9f4e4582c076c56e2c2cf"
-token = "c24ab76ade8dae7e5a61da8c5b9b2035"
+account = "ACd8b190ac32db53ce5407de706542c089"
+token = "a77d9faa14d31cbd4d4bbfb21b2520e8"
 client = Client(account, token)
 
 REVIEW_URL = 'https://review.udacity.com/#!/submissions/{sid}'
@@ -60,7 +60,7 @@ def alert_for_assignment(current_request, headers):
         logger.info("You have been assigned to grade a new submission!")
         logger.info("View it here: " + REVIEW_URL.format(sid=current_request['submission_id']))
         logger.info("=================================================")
-        message = client.messages.create(to="+917351819758", from_="+19732504689", body=REVIEW_URL.format(sid=current_request['submission_id']))
+        message = client.messages.create(to="+917060753767", from_="+12053833564", body=REVIEW_URL.format(sid=current_request['submission_id']))
         logger.info("Continuing to poll...")
         return None
     return current_request
